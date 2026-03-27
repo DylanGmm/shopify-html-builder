@@ -12,6 +12,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ### Changed
 
+- **Legal**: Apache `LICENSE` appendix copyright line set to DylanGong (2026); `NOTICE` aligned with GitHub profile (https://github.com/DylanGmm).
 - **Distribution**: Apache-2.0 `LICENSE` + `NOTICE`, `package.json` `license` field, drop `private` flag for public clones.
 - **Docs**: English root `README.md`, `docs/README.zh-CN.md`, `docs/README.md` index; remove legacy standalone `img2shopify.html` from the tree (pattern in `.gitignore`); PRD/project brief aligned with registry-first references.
 - **Positioning**: AI + SEO described as signature capabilities in README, PRD, project brief, and UI strings (`uiMessages`).
