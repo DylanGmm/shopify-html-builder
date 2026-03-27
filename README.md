@@ -14,6 +14,12 @@ Browser-based **Shopify HTML Builder** for assembling **scoped, production-ready
 
 **Docs**: [简体中文说明](docs/README.zh-CN.md)
 
+## Screenshot
+
+Three-column editor: components / sections / AI tools on the left, live Shopify-style preview in the center, slot editor and export on the right.
+
+![shopify-html-builder — editor with live preview, SEO checks, and export](docs/images/demo-snapshot.png)
+
 ## Features
 
 - **Nine section components** (header, hero, mixed grid, splits, 3-column grid, center copy + optional legend, options row, blueprint) with typed slots.

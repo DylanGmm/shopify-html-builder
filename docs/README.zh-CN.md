@@ -10,6 +10,12 @@
 **代码仓库**：[github.com/DylanGmm/shopify-html-builder](https://github.com/DylanGmm/shopify-html-builder)  
 **英文文档**：[README.md](../README.md)
 
+## 界面预览
+
+左侧为组件 / 区块序列 / AI 工具，中间为实时预览，右侧为槽位编辑与导出。
+
+![shopify-html-builder 编辑器与实时预览](images/demo-snapshot.png)
+
 ## 功能概览
 
 - **九类区块组件**（页头、主视觉、混排网格、左右分栏、三列网格、居中文案 + 可选图例、选项行、蓝图栅格等），槽位类型明确。  

@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+### Added
+
+- **Docs**: `docs/images/demo-snapshot.png` UI screenshot embedded in root `README.md` and `docs/README.zh-CN.md`.
+
 ### Changed
 
 - **Distribution**: Apache-2.0 `LICENSE` + `NOTICE`, `package.json` `license` field, drop `private` flag for public clones.
