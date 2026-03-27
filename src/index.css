@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+/**
+ * Editorial / paper UI tokens (inspired by warm hotel-key aesthetic, not a 1:1 copy).
+ * 纸质、暖色编辑台主题变量与全局质感。
+ */
+@theme {
+  --color-paper: #f4f1ea;
+  --color-ink: #1f1f1f;
+  --color-warm-gray: #d1d1c9;
+  --color-mustard: #ffc233;
+  --color-terracotta: #c65d3b;
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Cormorant Garamond", ui-serif, Georgia, "Times New Roman", serif;
+  --font-mono: "Courier Prime", ui-monospace, monospace;
+}
+
+@layer base {
+  :root {
+    --app-noise-tile: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23n)' opacity='0.08'/%3E%3C/svg%3E");
+  }
+
+  html {
+    @apply antialiased;
+  }
+
+  body {
+    @apply bg-paper text-ink font-sans;
+    background-image: var(--app-noise-tile);
+  }
+
+  ::selection {
+    @apply bg-terracotta text-white;
+  }
+}
+
+@layer utilities {
+  .app-shell {
+    @apply relative min-h-screen text-ink;
+    background-color: var(--color-paper);
+    background-image: var(--app-noise-tile);
+  }
+
+  .app-grain-overlay {
+    pointer-events: none;
+    position: fixed;
+    inset: 0;
+    z-index: 40;
+    opacity: 0.035;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='nf'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23nf)'/%3E%3C/svg%3E");
+  }
+
+  .chrome-panel {
+    @apply rounded-lg border border-warm-gray/50 bg-paper/90 shadow-sm backdrop-blur-[2px];
+  }
+
+  .chrome-divider {
+    @apply border-t border-warm-gray/40;
+  }
+
+  .chrome-heading {
+    @apply font-mono text-[10px] font-medium uppercase tracking-[0.2em] text-ink/45;
+  }
+
+  .chrome-interactive {
+    @apply transition-colors duration-200 ease-out;
+  }
+
+  .spin-slow {
+    animation: editorial-spin 24s linear infinite;
+  }
+
+  @keyframes editorial-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+/* Scrollbars: subtle, warm */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-warm-gray) transparent;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-warm-gray);
+  border-radius: 3px;
+}
