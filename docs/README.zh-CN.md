@@ -7,6 +7,7 @@
 
 **当前状态**：`0.3.0-rc.1`（发布候选）。
 
+**代码仓库**：[github.com/DylanGmm/shopify-html-builder](https://github.com/DylanGmm/shopify-html-builder)  
 **英文文档**：[README.md](../README.md)
 
 ## 功能概览
